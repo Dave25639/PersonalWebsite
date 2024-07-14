@@ -1,0 +1,269 @@
+/* style2.css */
+body {
+  font-family: monospace;
+  margin: 20px;
+  background-color: white;
+  color: black;
+  min-width: 250px;
+  padding-left: 250px;
+  padding-right: 5vh;
+}
+
+nav {
+  height: 100vh;
+  width: 15%;
+  min-width: 150px;
+  max-width: 250px;
+  background-color: #bfbfbf;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  color: white;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  transition: grey 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+#navbar a:hover {
+  background-color: white;
+}
+
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+article {
+  max-width: 1200px;
+  padding: 20px;
+  background-color: beige;
+  border: 1px solid #ccc;
+  align-items: center;
+}
+
+#title {
+  margin: 0;
+  text-align: left;
+  padding-left: 20vh;
+  cursor: default;
+  color: black;
+}
+
+.content {
+  font-size: 16px;
+  max-width: 100%;
+  margin-left: 250px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-module {
+  background-color: beige;
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  gap: 5%;
+}
+
+.project-divider {
+  position: relative;
+  flex: 1;
+}
+
+.project-description {
+  flex: 2;
+  vertical-align: middle;
+}
+
+.project-divider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  height: 100%;
+  width: 1px;
+  background-color: black;
+}
+
+.project-image {
+  max-width: 100%;
+  border-radius: 5px;
+  padding: 1%;
+  height: auto;
+}
+
+.qual-image {
+  max-width: 100%;
+  height: auto;
+  margin-right: 10px;
+  border: 3px solid grey;
+}
+
+.qual-image-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.socials-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.logo {
+  margin: 20px;
+  padding: 20px;
+  cursor: pointer;
+  border: 3px solid grey;
+  background: black;
+}
+
+.blinking-cursor {
+  padding-left: 150px;
+}
+
+.blinking-cursor::after {
+  content: "_";
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@media (max-width: 1000px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .socials-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    padding-left: 5vh;
+    padding-right: 5vh;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.toggle-container {
+  position: absolute;
+  top: 15px; /* Adjust the distance from the top */
+  right: 15px; /* Adjust the distance from the right */
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-wrapper .slider {
+  appearance: none;
+  background-color: #dfe1e4;
+  border-radius: 72px;
+  border-style: none;
+  flex-shrink: 0;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  width: 30px;
+}
+
+.checkbox-wrapper .slider::before {
+  bottom: -6px;
+  content: "";
+  left: -6px;
+  position: absolute;
+  right: -6px;
+  top: -6px;
+}
+
+.checkbox-wrapper .slider,
+.checkbox-wrapper .slider::after {
+  transition: all 100ms ease-out;
+}
+
+.checkbox-wrapper .slider::after {
+  background-color: #fff;
+  border-radius: 50%;
+  content: "";
+  height: 14px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  width: 14px;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  cursor: default;
+}
+
+.checkbox-wrapper .slider:hover {
+  background-color: #c9cbcd;
+  transition-duration: 0s;
+}
+
+.checkbox-wrapper .slider:checked {
+  background-color: #6e79d6;
+}
+
+.checkbox-wrapper .slider:checked::after {
+  background-color: #fff;
+  left: 13px;
+}
+
+.checkbox-wrapper :focus:not(.focus-visible) {
+  outline: 0;
+}
+
+.checkbox-wrapper .slider:checked:hover {
+  background-color: #535db3;
+}

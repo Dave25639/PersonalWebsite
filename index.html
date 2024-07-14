@@ -1,0 +1,45 @@
+<!-- index.html -->
+<!-- TODO: USE ARTICLE DIVIDER OBJECT -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>david t.</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Link to the external CSS file -->
+    <link id="css" rel="stylesheet" href="styles/dark.css" />
+  </head>
+  <body>
+    <!-- Toggle css button-->
+    <div class="toggle-container">
+      <div class="checkbox-wrapper">
+        <label class="switch"
+          >Toggle style:&nbsp;
+          <input
+            id="cb"
+            type="checkbox"
+            class="slider"
+            onchange="onToggleChange(this)"
+          />
+        </label>
+      </div>
+    </div>
+    <!-- Text box with name -->
+    <h1 id="title" class="deactivated">_</h1>
+
+    <!-- Menu with links -->
+    <nav class="fade-in">
+      <a href="index.html">home</a> // <a href="projects.html">projects</a> //
+      <a href="qualifications.html">qualifications</a> //
+      <a href="service.html">service</a> //
+      <a href="AI.html">socials</a>
+    </nav>
+    <script src="scripts/script.js"></script>
+    <script>
+      darkMode();
+      textMainTitle();
+    </script>
+  </body>
+</html>

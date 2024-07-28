@@ -28,6 +28,11 @@ function idleCursorEffect(element, text, swap = false) {
   document.getElementById("title").setAttribute("class", "blinking-cursor");
 }
 
+function typeEffect(target_name, input_text) {
+  const target = document.getElementById(target_name);
+  textTypingEffect(target, text);
+}
+
 function textMainTitle() {
   const title = document.getElementById("title");
   const text = "david tanase";
